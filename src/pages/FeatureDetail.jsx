@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom"
 import { features, featureMap } from "../data/features"
 import CommunityPortal from "../features/CommunityPortal/index.jsx"
+import IssueTracker from "../features/IssueTracker/index.jsx"
 
 export default function FeatureDetail() {
   const { id } = useParams()
@@ -63,6 +64,10 @@ export default function FeatureDetail() {
 
       {meta.id === 1 && (
         <CommunityPortal />
+      )}
+
+      {meta.id === 9 && (
+        <IssueTracker />
       )}
     </div>
   )
